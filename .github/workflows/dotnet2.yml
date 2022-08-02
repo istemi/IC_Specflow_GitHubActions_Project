@@ -29,5 +29,5 @@ jobs:
       if: success() || failure()           # run this step even if previous step failed
       with:
         name: Spec Flow Tests              # Name of the check run which will be created
-        path: '/TestResults/net6.0/*.trx'  # Path to test results
+        path: '*.trx'  # Path to test results
         reporter: dotnet-trx               # Format of test results
