@@ -13,9 +13,8 @@ namespace SpecFlow_GithubActions.Drivers
         public static IWebDriver GetDriver(int index = 0)
         {
             if (Driver._iWebDrivers.ElementAtOrDefault<IWebDriver>(index) == null)
-            {                           
-                //Driver._iWebDrivers.Insert(index, (IWebDriver)new ChromeDriver("C:\\Users\\ibrah\\source\\repos\\SpecFlow_GithubActions"));
-                Driver._iWebDrivers.Insert(index, (IWebDriver)new ChromeDriver());
+            {                
+                Driver._iWebDrivers.Insert(index, (IWebDriver)new ChromeDriver(@"../../../" + "Drivers/"));
             }
             return Driver._iWebDrivers[index];
         }
