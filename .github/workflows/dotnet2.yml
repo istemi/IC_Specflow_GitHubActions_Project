@@ -26,8 +26,8 @@ jobs:
       
     - name: Test Report
       uses: dorny/test-reporter@v1
-      if: success() || failure()    # run this step even if previous step failed
+      if: success() || failure()         # run this step even if previous step failed
       with:
-        name: Spec Flow Tests       # Name of the check run which will be created
-        path: reports/dotnet-*.xml  # Path to test results
-        reporter: dotnet-trx        # Format of test results
+        name: Spec Flow Tests            # Name of the check run which will be created
+        path: /TestResults/net6.0/*.trx  # Path to test results
+        reporter: dotnet-trx             # Format of test results
