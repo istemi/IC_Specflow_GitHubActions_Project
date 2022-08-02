@@ -23,6 +23,8 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: List tree
+      run: tree
       
     - name: Test Report
       uses: dorny/test-reporter@v1
